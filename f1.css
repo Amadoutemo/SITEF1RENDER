@@ -1,0 +1,111 @@
+:root {
+    --f1-red: #e10600;
+    --dark-bg: #15151e;
+    --card-bg: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f2;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--dark-bg);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 5px solid var(--f1-red);
+}
+
+.selectors-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.select-box {
+    display: flex;
+    flex-direction: column;
+}
+
+select {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 250px;
+}
+
+.vs-badge {
+    font-weight: bold;
+    color: var(--f1-red);
+    font-size: 1.5rem;
+}
+
+/* Grille de comparaison */
+.comparison-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.driver-card {
+    background: var(--card-bg);
+    width: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.content {
+    padding: 20px;
+}
+
+.content h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--dark-bg);
+}
+
+.bio {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 10px 0 20px 0;
+    line-height: 1.4;
+}
+
+/* Liste des stats */
+.stats {
+    list-style: none;
+    padding: 0;
+}
+
+.stats li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.stats li span {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.stats li strong {
+    color: var(--dark-bg);
+}
