@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta nom="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comparateur de pilotes de F1 2026</title>
     <style>
         body { font-family: sans-serif; background: #f4f4f4; margin: 0; padding: 20px; }
@@ -80,13 +80,13 @@
             <img id="img-1" src="" alt="Pilote 1">
         </div>
         <div class="content">
-            <h2 id="name-1"></h2>
+            <h2 id="nom-1"></h2>
             <p id="bio-1" class="bio"></p>
             <ul class="stats">
-                <li><span>Écurie :</span> <strong id="team-1"></strong></li>
-                <li><span>Titres :</span> <strong id="titles-1"></strong></li>
+                <li><span>Écurie :</span> <strong id="equipe-1"></strong></li>
+                <li><span>Titres :</span> <strong id="titres-1"></strong></li>
                 <li><span>Podiums :</span> <strong id="podiums-1"></strong></li>
-                <li><span>Victoires :</span> <strong id="wins-1"></strong></li>
+                <li><span>Victoires :</span> <strong id="victoires-1"></strong></li>
             </ul>
         </div>
     </article>
@@ -96,13 +96,13 @@
             <img id="img-2" src="" alt="Pilote 2">
         </div>
         <div class="content">
-            <h2 id="name-2"></h2>
+            <h2 id="nom-2"></h2>
             <p id="bio-2" class="bio"></p>
             <ul class="stats">
-                <li><span>Écurie :</span> <strong id="team-2"></strong></li>
-                <li><span>Titres :</span> <strong id="titles-2"></strong></li>
+                <li><span>Écurie :</span> <strong id="equipe-2"></strong></li>
+                <li><span>Titres :</span> <strong id="titres-2"></strong></li>
                 <li><span>Podiums :</span> <strong id="podiums-2"></strong></li>
-                <li><span>Victoires :</span> <strong id="wins-2"></strong></li>
+                <li><span>Victoires :</span> <strong id="victoires-2"></strong></li>
             </ul>
         </div>
     </article>
@@ -111,47 +111,47 @@
     <script>
         const driversData = {
             sainz: {
-                name: "Carlos Sainz",
-                team: "Williams",
-                titles: "0",
+                nom: "Carlos Sainz",
+                equipe: "Williams",
+                titres: "0",
                 podiums: "29",
-                wins: "4",
+                victoires: "4",
                 bio: "Le 'Smooth Operator' mène le projet Williams-Mercedes.",
                 img: "https://cdn-1.motorsport.com/images/mgl/2jXPqrg6/s800/carlos-sainz-williams.webp"
             },
             verstappen: {
-                name: "Max Verstappen",
-                team: "Red Bull Racing",
-                titles: "4",
+                nom: "Max Verstappen",
+                equipe: "Red Bull Racing",
+                titres: "4",
                 podiums: "127",
-                wins: "71",
+                victoires: "71",
                 bio: "Le champion sortant, fer de lance de l'écurie Red Bull.",
                 img: "https://cdn-7.motorsport.com/images/mgl/YvKQLrx6/s8/max-verstappen-red-bull-racing.jpg"
             },
             hadjar: {
-                name: "Isack Hadjar",
-                team: "Red Bull Racing",
-                titles: "0",
+                nom: "Isack Hadjar",
+                equipe: "Red Bull Racing",
+                titres: "0",
                 podiums: "0",
-                wins: "0",
+                victoires: "0",
                 bio: "Le jeune espoir français fait ses débuts dans l'écurie mère.",
                 img: "https://ratings-images-prod.pulse.ea.com/F1-25/portraits/p20.png?im=FaceCrop,algorithm=dnn,padding=0.7,width=256,height=256"
             },
             hamilton: {
-                name: "Lewis Hamilton",
-                team: "Ferrari",
-                titles: "7",
+                nom: "Lewis Hamilton",
+                equipe: "Ferrari",
+                titres: "7",
                 podiums: "203",
-                wins: "105",
+                victoires: "105",
                 bio: "Le septuple champion entame sa 2ème saison chez les Rouges.",
                 img: "https://cdn-2.motorsport.com/images/mgl/0rVxlq50/s800/lewis-hamilton-ferrari-2.webp"
             },
             leclerc : {
-                name: "Charles Leclerc",
-                team: "Ferrari",
-                titles: "0",
+                nom: "Charles Leclerc",
+                equipe: "Ferrari",
+                titres: "0",
                 podiums: "52",
-                wins: "8",
+                victoires: "8",
                 bio: "Le 'Petit Prince' de Monaco et pur talent de la Scuderia.",
                 img: "https://cdn-9.motorsport.com/images/mgl/6grBRd7Y/s8/charles-leclerc-ferrari.jpg"
             }
@@ -163,14 +163,19 @@
             const data = driversData[selectedDriver];
 
             if (data) {
-                document.getElementById("name-" + cardNumber).innerText = data.name;
-                document.getElementById("team-" + cardNumber).innerText = data.team;
-                document.getElementById("titles-" + cardNumber).innerText = data.titles;
-                document.getElementById("wins-" + cardNumber).innerText = data.wins;
+                document.getElementById("nom-" + cardNumber).innerText = data.nom;
+                document.getElementById("equipe-" + cardNumber).innerText = data.equipe;
+                document.getElementById("titres-" + cardNumber).innerText = data.titres;
+                document.getElementById("podiums-" + cardNumber).innerText = data.podiums
+                document.getElementById("victoires-" + cardNumber).innerText = data.victoires;
                 document.getElementById("bio-" + cardNumber).innerText = data.bio;
                 document.getElementById("img-" + cardNumber).src = data.img;
             }
         }
+        window.onload = function() {
+    updateDriver(1);
+    updateDriver(2);
+};
     </script>
 
 </body>
